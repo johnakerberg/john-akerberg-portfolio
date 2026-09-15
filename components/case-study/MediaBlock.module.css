@@ -1,0 +1,12 @@
+.block {
+  margin-block-start: var(--space-6);
+  width: 100%;
+}
+
+.block[data-width="wide"] {
+  max-width: 100%;
+}
+
+.block[data-width="content"] {
+  max-width: var(--prose-max-width);
+}

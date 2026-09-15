@@ -1,0 +1,25 @@
+.hero {
+  padding-block-start: var(--space-7);
+  padding-block-end: var(--space-8);
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-block-end: var(--space-4);
+}
+
+.heading {
+  font-size: clamp(1.875rem, 1.4rem + 2.4vw, 3.5rem);
+  font-weight: 600;
+  line-height: 1.15;
+  max-width: 22ch;
+  margin-block-end: var(--space-7);
+}
+
+.imageWrap {
+  width: 100%;
+}

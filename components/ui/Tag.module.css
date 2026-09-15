@@ -1,0 +1,11 @@
+.tag {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+.tag:not(:last-child)::after {
+  content: "·";
+  margin-inline-start: var(--space-2);
+  color: var(--color-border);
+}

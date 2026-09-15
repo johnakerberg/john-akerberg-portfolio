@@ -1,0 +1,19 @@
+.tlDr {
+  padding-block-end: var(--space-8);
+}
+
+.tlDrLabel {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-block-end: var(--space-3);
+}
+
+.tlDrBody {
+  font-size: 1.1875rem;
+  line-height: 1.5;
+  max-width: var(--prose-max-width);
+  color: var(--color-text);
+}

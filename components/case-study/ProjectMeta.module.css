@@ -1,0 +1,37 @@
+.meta {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+  padding-block: var(--space-6);
+  border-block: 1px solid var(--color-border);
+  margin-block-end: var(--space-8);
+}
+
+@media (min-width: 768px) {
+  .meta {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-6);
+  }
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.term {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.description {
+  font-size: 0.9375rem;
+}
+
+.contributionList li {
+  line-height: 1.6;
+}
