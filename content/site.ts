@@ -18,12 +18,8 @@ export const contact = {
   linkedin: "https://www.linkedin.com/in/johnakerberg", // TODO: confirm real LinkedIn URL
 };
 
-/**
- * TODO: replace with the final production domain once known.
- * Do not hard-code the old Framer domain as canonical (brief section 72).
- */
 export const siteConfig = {
-  url: "https://johnakerberg.com", // TODO: replace with final production domain
+  url: "https://johnakerberg.com",
   title: {
     sv: "John Åkerberg — UX / Product Designer",
     en: "John Åkerberg — UX / Product Designer",
