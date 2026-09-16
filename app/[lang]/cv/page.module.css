@@ -1,0 +1,149 @@
+.page {
+  padding-block: var(--space-8) var(--space-9);
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-block-end: var(--space-4);
+}
+
+.heading {
+  font-size: clamp(2rem, 1.5rem + 2.4vw, 3.5rem);
+  font-weight: 600;
+  line-height: 1.12;
+  max-width: 20ch;
+}
+
+.subheading {
+  color: var(--color-text-muted);
+  font-size: 1.0625rem;
+  margin-block-start: var(--space-3);
+}
+
+.email {
+  display: inline-block;
+  margin-block-start: var(--space-2);
+  color: var(--color-accent);
+}
+
+.summary {
+  max-width: var(--prose-max-width);
+  color: var(--color-text-muted);
+  font-size: 1.0625rem;
+  margin-block-start: var(--space-6);
+}
+
+.section {
+  margin-block-start: var(--space-8);
+  padding-block-start: var(--space-7);
+  border-top: 1px solid var(--color-border);
+}
+
+.sectionHeading {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  margin-block-end: var(--space-5);
+}
+
+.entryList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.entry {
+  max-width: var(--prose-max-width);
+}
+
+.entryHead {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--space-2) var(--space-4);
+}
+
+.entryRole {
+  font-weight: 600;
+}
+
+.entryOrg {
+  color: var(--color-text-muted);
+}
+
+.entryTimeline {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+.bulletList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-block-start: var(--space-3);
+  color: var(--color-text-muted);
+}
+
+.bulletList li {
+  padding-inline-start: var(--space-4);
+  position: relative;
+}
+
+.bulletList li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--color-accent);
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+}
+
+@media (min-width: 768px) {
+  .columns {
+    grid-template-columns: 1.4fr 1fr;
+    gap: var(--space-9);
+  }
+}
+
+.tagList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-4);
+  color: var(--color-text-muted);
+  font-size: 0.9375rem;
+}
+
+.languageList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  font-size: 0.9375rem;
+}
+
+.languageList li {
+  display: flex;
+  justify-content: space-between;
+  max-width: 280px;
+}
+
+.languageLevel {
+  color: var(--color-text-muted);
+}
+
+.contactLink {
+  margin-block-start: var(--space-8);
+}

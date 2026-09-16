@@ -35,3 +35,7 @@
 .media {
   margin-block-start: var(--space-7);
 }
+
+.media[data-orientation="portrait"] {
+  max-width: 420px;
+}

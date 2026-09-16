@@ -4,7 +4,7 @@ import { useEffect, useId, useRef, useState } from "react";
 import Link from "next/link";
 import type { Locale } from "@/lib/i18n";
 import { translations } from "@/content/translations";
-import { contact } from "@/content/site";
+import { localePath } from "@/lib/paths";
 import styles from "./MobileNavigation.module.css";
 
 type NavItem = { href: string; label: string };
@@ -53,9 +53,9 @@ export function MobileNavigation({ lang, navItems }: { lang: Locale; navItems: N
               </li>
             ))}
             <li>
-              <a href={contact.cvHref} onClick={() => setOpen(false)}>
-                {t.navCV} <span aria-hidden="true">↗</span>
-              </a>
+              <Link href={localePath(lang, "/cv")} onClick={() => setOpen(false)}>
+                {t.navCV}
+              </Link>
             </li>
           </ul>
         </div>

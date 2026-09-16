@@ -1,6 +1,7 @@
 import { Container } from "@/components/ui/Container";
 import { translations } from "@/content/translations";
 import { contact } from "@/content/site";
+import { localePath } from "@/lib/paths";
 import type { Locale } from "@/lib/i18n";
 import styles from "./ContactCTA.module.css";
 
@@ -30,7 +31,7 @@ export function ContactCTA({ lang }: { lang: Locale }) {
             </a>
           </li>
           <li>
-            <a href={contact.cvHref}>{t.contactCVLabel}</a>
+            <a href={localePath(lang, "/cv")}>{t.contactCVLabel}</a>
           </li>
         </ul>
       </Container>

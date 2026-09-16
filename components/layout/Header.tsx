@@ -4,7 +4,6 @@ import { LanguageSwitcher } from "./LanguageSwitcher";
 import { MobileNavigation } from "./MobileNavigation";
 import { localePath } from "@/lib/paths";
 import { translations } from "@/content/translations";
-import { contact } from "@/content/site";
 import type { Locale } from "@/lib/i18n";
 import styles from "./Header.module.css";
 
@@ -33,9 +32,9 @@ export function Header({ lang }: { lang: Locale }) {
               </li>
             ))}
             <li>
-              <a href={contact.cvHref} className={styles.cvLink}>
-                {t.navCV} <span aria-hidden="true">↗</span>
-              </a>
+              <Link href={localePath(lang, "/cv")} className={styles.cvLink}>
+                {t.navCV}
+              </Link>
             </li>
           </ul>
         </nav>

@@ -10,14 +10,12 @@ export const person = {
 };
 
 /**
- * Real contact details have not been supplied yet. These are clearly
- * marked placeholders — do not present them to a visitor as verified
- * without first confirming with John. See CONTENT NEEDED report.
+ * LinkedIn URL is still a placeholder — confirm the real one with John
+ * before treating it as verified.
  */
 export const contact = {
-  email: "hello@johnakerberg.com", // TODO: confirm real contact email
+  email: "john94akerberg@gmail.com",
   linkedin: "https://www.linkedin.com/in/johnakerberg", // TODO: confirm real LinkedIn URL
-  cvHref: "/cv/john-akerberg-cv.pdf", // TODO: add real CV file to /public/cv
 };
 
 /**
@@ -47,12 +45,12 @@ export const aboutContent = {
       en: "I enjoy getting close to how people actually behave: where products become confusing, where expectations break down and where a small design decision can make an experience dramatically easier to understand.",
     },
     {
-      sv: "TODO: Lägg till ett andra stycke om Johns bakgrund, arbetssätt eller vad som driver honom som designer.",
-      en: "TODO: Add a second paragraph about John's background, way of working, or what drives him as a designer.",
+      sv: "Jag har en bakgrund inom veterinärmedicin, service och logistik, och tog mig in i UX genom ett intresse för psykologi: hur människor tänker, känner och beter sig. Design ska inte bara fungera i teorin, den ska kännas rimlig och begriplig för dem som faktiskt använder den. Jag ser AI som ett kraftfullt verktyg snarare än ett hot, rätt använt effektiviserar det delar av designprocessen, men ju bättre det blir desto viktigare blir den mänskliga förmågan att förstå sammanhang, empati och verkliga behov.",
+      en: "I have a background in veterinary medicine, service and logistics, and found my way into UX through an interest in psychology: how people think, feel and behave. Design shouldn't just work in theory, it should feel reasonable and understandable to the people who actually use it. I see AI as a powerful tool rather than a threat, used well it streamlines parts of the design process, but the better it gets, the more the human ability to understand context, empathy and real needs matters.",
     },
     {
-      sv: "TODO: Lägg till ett tredje stycke, till exempel om typen av projekt eller samarbeten han söker.",
-      en: "TODO: Add a third paragraph, for example about the kind of projects or collaborations he's looking for.",
+      sv: "Utanför jobbet håller jag mig igång med padel, skidåkning, golf och friluftsliv, det ger mig samma perspektiv, struktur och energi som jag försöker ta med in i designarbetet: nyfiken, uthållig och konsekvent. Jag söker en plats där jag får fortsätta växa som designer i ett team som uppskattar någon som ställer rätt frågor och tänker ett varv till.",
+      en: "Outside of work I stay active with padel, skiing, golf and the outdoors, which gives me the same perspective, structure and energy I try to bring into my design work: curious, persistent and consistent. I'm looking for a place where I can keep growing as a designer, in a team that values someone who asks the right questions and thinks one step further.",
     },
   ] satisfies Record<Locale, string>[],
   tools: [

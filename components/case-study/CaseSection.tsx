@@ -10,6 +10,12 @@ import styles from "./CaseSection.module.css";
 export function CaseSection({ section, lang }: { section: CaseSectionContent; lang: Locale }) {
   const singleImage = section.imageKey ? imageRegistry[section.imageKey] : null;
   const headingId = `section-${section.id}`;
+  const isPortrait = singleImage
+    ? (() => {
+        const [w, h] = singleImage.ratio.split("/").map(Number);
+        return w < h;
+      })()
+    : false;
 
   return (
     <section className={styles.section} aria-labelledby={headingId}>
@@ -36,7 +42,7 @@ export function CaseSection({ section, lang }: { section: CaseSectionContent; la
         ) : null}
 
         {!section.imageGrid && singleImage ? (
-          <div className={styles.media}>
+          <div className={styles.media} data-orientation={isPortrait ? "portrait" : "landscape"}>
             <ImageSlot
               src={singleImage.src}
               alt={singleImage.alt[lang]}

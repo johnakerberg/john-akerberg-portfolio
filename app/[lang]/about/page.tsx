@@ -45,7 +45,13 @@ export default async function AboutPage({
   if (!isLocale(lang)) notFound();
 
   const t = translations[lang];
-  const portrait = imageRegistry.PORTRAIT_01;
+  const collage = [
+    imageRegistry.ABOUT_PADEL,
+    imageRegistry.ABOUT_HIKING,
+    imageRegistry.ABOUT_SKIING,
+    imageRegistry.ABOUT_GOLF,
+  ];
+  const collageKeys = ["ABOUT_PADEL", "ABOUT_HIKING", "ABOUT_SKIING", "ABOUT_GOLF"] as const;
 
   return (
     <article className={styles.page}>
@@ -54,15 +60,18 @@ export default async function AboutPage({
         <h1 className={styles.heading}>{aboutContent.heading[lang]}</h1>
 
         <div className={styles.layout}>
-          <div className={styles.portrait}>
-            <ImageSlot
-              src={portrait.src}
-              alt={portrait.alt[lang]}
-              label="PORTRAIT_01"
-              aspectRatio={portrait.ratio}
-              priority
-              sizes="(min-width: 1024px) 35vw, 100vw"
-            />
+          <div className={styles.collage}>
+            {collage.map((image, index) => (
+              <ImageSlot
+                key={collageKeys[index]}
+                src={image.src}
+                alt={image.alt[lang]}
+                label={collageKeys[index]}
+                aspectRatio={image.ratio}
+                priority={index === 0}
+                sizes="(min-width: 1024px) 18vw, 45vw"
+              />
+            ))}
           </div>
 
           <div className={styles.copy}>

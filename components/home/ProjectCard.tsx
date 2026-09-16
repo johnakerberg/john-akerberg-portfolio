@@ -8,6 +8,13 @@ import type { Locale } from "@/lib/i18n";
 import type { Project } from "@/content/projects";
 import styles from "./ProjectCard.module.css";
 
+/**
+ * Card thumbnails always crop to this ratio regardless of the hero image's
+ * own native ratio (used full-size on the case study page itself), so the
+ * three cards in the homepage grid line up at the same height.
+ */
+const CARD_IMAGE_RATIO = "16/10";
+
 export function ProjectCard({
   project,
   lang,
@@ -29,7 +36,7 @@ export function ProjectCard({
           src={image.src}
           alt={image.alt[lang]}
           label={project.heroImageKey}
-          aspectRatio={image.ratio}
+          aspectRatio={CARD_IMAGE_RATIO}
           priority={priority}
           className={styles.image}
         />

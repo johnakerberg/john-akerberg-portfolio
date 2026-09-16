@@ -59,7 +59,15 @@ export const translations = {
     // About page
     aboutPageEyebrow: "OM MIG",
     aboutToolsHeading: "Verktyg jag använder",
-    aboutContactLink: "Kontakta John",
+    aboutContactLink: "Kontakta mig",
+
+    // CV page
+    cvPageEyebrow: "CV",
+    cvExperienceHeading: "Erfarenhet",
+    cvEducationHeading: "Utbildning",
+    cvSkillsHeading: "Kompetenser",
+    cvLanguagesHeading: "Språk",
+    cvContactLink: "Kontakta mig",
 
     // Case study
     caseTlDrLabel: "Sammanfattning",
@@ -137,7 +145,15 @@ export const translations = {
     // About page
     aboutPageEyebrow: "ABOUT",
     aboutToolsHeading: "Tools I use",
-    aboutContactLink: "Contact John",
+    aboutContactLink: "Contact me",
+
+    // CV page
+    cvPageEyebrow: "CV",
+    cvExperienceHeading: "Experience",
+    cvEducationHeading: "Education",
+    cvSkillsHeading: "Skills",
+    cvLanguagesHeading: "Languages",
+    cvContactLink: "Contact me",
 
     // Case study
     caseTlDrLabel: "Summary",

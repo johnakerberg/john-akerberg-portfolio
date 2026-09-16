@@ -59,7 +59,7 @@ Requires Node.js 20.9+ (Next.js 16 requirement).
 
 ## Adding a real image later
 
-Open `content/image-registry.ts`, find the key (e.g. `TOGETHER_HERO`),
+Open `content/image-registry.ts`, find the key (e.g. `BUBBLAN_HERO`),
 and change:
 
 ```ts
@@ -69,7 +69,7 @@ src: null,
 to:
 
 ```ts
-src: "https://your-host.com/together-by-iris-hero.webp",
+src: "https://your-host.com/bubblan-hero.webp",
 ```
 
 If the URL's host isn't already allowed, add it to `remotePatterns` in
@@ -83,18 +83,27 @@ layout and aspect ratio stay identical.
 **Global**
 - `PORTRAIT_01` — 4:5
 
-**Together by Iris**
-- `TOGETHER_HERO` — 16:10
-- `TOGETHER_CONTEXT_01` — 4:3
-- `TOGETHER_CONTEXT_02` — 4:3
-- `TOGETHER_RESEARCH_01` — 3:2
-- `TOGETHER_RESEARCH_02` — 3:2
-- `TOGETHER_INSIGHTS_01` — 4:3
-- `TOGETHER_DIRECTION_01` — 16:10
-- `TOGETHER_WIREFRAMES_01` — 4:3
-- `TOGETHER_FINAL_01` — 16:10
-- `TOGETHER_FINAL_02` — 3:2
-- `TOGETHER_FINAL_03` — 9:16
+**Bubblan**
+- `BUBBLAN_HERO` — 16:10
+- `BUBBLAN_OLD_UI` — 3:4
+- `BUBBLAN_NEW_HOME` — 16:10
+- `BUBBLAN_NEW_CONTACTS` — 3:4
+
+Real screenshots exist for this case in the examensarbete's bilagor
+(old Bubblan UI, new Bubblan home + contacts screens) — extract them
+from the PDF and drop into `public/images/` to replace the
+placeholders.
+
+**Digital Care**
+- `DC_HERO` — 16:10
+- `DC_OLD_DASHBOARD` — 16:10
+- `DC_NEW_DASHBOARD` — 16:10
+- `DC_DEVICE_DETAIL` — 3:4
+- `DC_ADD_USER` — 3:4
+
+Real screenshots exist for this case too (old DC dashboard, new DC
+dashboard, Climax device detail, add-user admin flow) — same source
+as above.
 
 **Care by Iris**
 - `IRIS_HERO` — 16:10
@@ -104,14 +113,6 @@ layout and aspect ratio stay identical.
 - `IRIS_ONBOARDING_01` — 9:16
 - `IRIS_FINAL_01` — 16:10
 - `IRIS_FINAL_02` — 3:2
-
-**TryOn**
-- `TRYON_HERO` — 16:10
-- `TRYON_RESEARCH_01` — 4:3
-- `TRYON_FLOW_01` — 3:2
-- `TRYON_WIREFRAME_01` — 4:3
-- `TRYON_FINAL_01` — 16:10
-- `TRYON_FINAL_02` — 9:16
 
 **Explorations**
 - `VOYANT_PREVIEW` — 4:3
@@ -131,22 +132,18 @@ layout and aspect ratio stay identical.
 **About page** (`content/site.ts` → `aboutContent`)
 - Second and third paragraphs about John's background and what he's looking for
 
-**Together by Iris**
-- Verified TL;DR
-- Verified challenge, research methods, and findings (no invented participant counts)
-- Verified insight (observation / why it mattered / design implication)
-- Verified outcome and reflection
+**Bubblan** and **Digital Care**
+- Content is filled in from John's LIA reflection and examensarbete
+  ("Att designa för den man inte når") — no TODOs remain in
+  `content/projects.ts` for these two cases
+- Still needed: the real screenshots from the examensarbete's bilagor
+  (see IMAGES NEEDED above)
 
 **Care by Iris**
 - Verified TL;DR
 - Verified challenge, research methods, and findings
 - Verified insight
 - Verified outcome and reflection
-
-**TryOn**
-- Verified TL;DR
-- Timeline (currently a placeholder)
-- Verified challenge, research, direction, outcome and reflection
 
 **Selected Explorations**
 - Short, verified descriptions for Voyant, Alpha Leap and Velox
