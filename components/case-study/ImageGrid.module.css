@@ -14,3 +14,13 @@
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+/* Half-size items side by side, even on mobile */
+.grid[data-compact] {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grid[data-compact] > * {
+  width: min(250px, calc(50% - var(--space-5) / 2));
+}

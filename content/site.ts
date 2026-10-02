@@ -45,8 +45,8 @@ export const aboutContent = {
       en: "I have a background in veterinary medicine, service and logistics, and found my way into UX through an interest in psychology: how people think, feel and behave. Design shouldn't just work in theory, it should feel reasonable and understandable to the people who actually use it. I see AI as a powerful tool rather than a threat, used well it streamlines parts of the design process, but the better it gets, the more the human ability to understand context, empathy and real needs matters.",
     },
     {
-      sv: "Utanför jobbet håller jag mig igång med padel, skidåkning, golf och friluftsliv, det ger mig samma perspektiv, struktur och energi som jag försöker ta med in i designarbetet: nyfiken, uthållig och konsekvent. Jag söker en plats där jag får fortsätta växa som designer i ett team som uppskattar någon som ställer rätt frågor och tänker ett varv till.",
-      en: "Outside of work I stay active with padel, skiing, golf and the outdoors, which gives me the same perspective, structure and energy I try to bring into my design work: curious, persistent and consistent. I'm looking for a place where I can keep growing as a designer, in a team that values someone who asks the right questions and thinks one step further.",
+      sv: "Utanför jobbet spelar jag padel och golf, åker skidor så fort jag får chansen och tar mig gärna ut i naturen. Jag har svårt att stänga av tävlingsinstinkten: jag gillar att tävla, och jag gillar att vinna ännu mer, oavsett om det är på padelbanan eller golfbanan. För den som undrar har jag även 30 hp i afterwork.",
+      en: "Outside of work I play padel and golf, go skiing whenever I get the chance and like getting out into nature. I find it hard to switch off my competitive streak: I like to compete, and I like winning even more, whether it's on the padel court or the golf course. For the record, I also hold 30 university credits in afterwork.",
     },
   ] satisfies Record<Locale, string>[],
   tools: [

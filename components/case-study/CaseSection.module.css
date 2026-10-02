@@ -39,3 +39,8 @@
 .media[data-orientation="portrait"] {
   max-width: 420px;
 }
+
+/* Half-size, for tall phone mockups that would otherwise dominate */
+.media[data-orientation="portrait"][data-compact] {
+  max-width: 210px;
+}

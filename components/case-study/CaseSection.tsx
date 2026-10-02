@@ -38,11 +38,20 @@ export function CaseSection({ section, lang }: { section: CaseSectionContent; la
         </div>
 
         {section.imageGrid ? (
-          <ImageGrid imageKeys={section.imageGrid} lang={lang} columns={section.imageGrid.length >= 3 ? 3 : 2} />
+          <ImageGrid
+            imageKeys={section.imageGrid}
+            lang={lang}
+            columns={section.imageGrid.length >= 3 ? 3 : 2}
+            compact={section.compactMedia}
+          />
         ) : null}
 
         {!section.imageGrid && singleImage ? (
-          <div className={styles.media} data-orientation={isPortrait ? "portrait" : "landscape"}>
+          <div
+            className={styles.media}
+            data-orientation={isPortrait ? "portrait" : "landscape"}
+            data-compact={section.compactMedia ? "" : undefined}
+          >
             <ImageSlot
               src={singleImage.src}
               alt={singleImage.alt[lang]}

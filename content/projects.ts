@@ -20,6 +20,8 @@ export type CaseSectionContent = {
   body: LocalizedText[];
   imageKey?: ImageKey;
   imageGrid?: ImageKey[];
+  /** Show the section's image(s) at half size, e.g. tall phone mockups. */
+  compactMedia?: boolean;
   insight?: CaseInsight;
 };
 
@@ -283,6 +285,7 @@ const careByIris: Project = {
         ),
       ],
       imageKey: "IRIS_RESEARCH_01",
+      compactMedia: true,
     },
     {
       id: "direction",
@@ -321,6 +324,7 @@ const careByIris: Project = {
         ),
       ],
       imageKey: "IRIS_WORKSHOP_01",
+      compactMedia: true,
     },
     {
       id: "final",
@@ -333,6 +337,7 @@ const careByIris: Project = {
         ),
       ],
       imageGrid: ["IRIS_FINAL_01", "IRIS_FINAL_02"],
+      compactMedia: true,
     },
     {
       id: "outcome",
