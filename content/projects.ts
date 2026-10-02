@@ -37,6 +37,8 @@ export type Project = {
   descriptor: LocalizedText;
   tags: string[];
   heroImageKey: ImageKey;
+  /** Case colour for hover states, taken from the product. Must keep ≥4.5:1 on --color-bg. */
+  accent: string;
   tlDr: LocalizedText;
   meta: ProjectMeta;
   sections: CaseSectionContent[];
@@ -45,7 +47,8 @@ export type Project = {
 export type Exploration = {
   slug: string;
   title: string;
-  descriptor: LocalizedText;
+  /** Optional — explorations are listed by name only as "coming soon" for now. */
+  descriptor?: LocalizedText;
   imageKey: ImageKey;
 };
 
@@ -64,6 +67,7 @@ const bubblan: Project = {
   ),
   tags: ["Accessibility", "Senior UX", "Product Design"],
   heroImageKey: "BUBBLAN_HERO",
+  accent: "#0b5e3a", // Bubblan green — 7.0:1
   tlDr: text(
     "Bubblan är en kommunikationshub som Sensapp placerar hemma hos äldre omsorgstagare för digital tillsyn, gruppsamtal och videosamtal. Jag moderniserade det befintliga gränssnittet och tog över wireframes för den nya anhörigappen, men utan möjlighet att intervjua Bubblans primära användare direkt. Jag förankrade designvalen istället i WCAG och forskning om seniordesign, indirekt återkoppling via en kommunkontakt, och samlad erfarenhet från Sensapp och en tidigare LIA. Arbetet blev kärnan i mitt examensarbete om användarcentrering utan direkt användarkontakt.",
     "Bubblan is a communication hub Sensapp places in elderly care recipients' homes for digital check-ins, group calls, and video calls. I modernized the existing interface and took over wireframes for the new companion app, without being able to interview Bubblan's primary users directly. I grounded design decisions instead in WCAG and senior-design research, indirect feedback via a municipal contact, and collected experience from Sensapp and a prior internship. The work became the core of my thesis on user-centered design without direct user access."
@@ -217,6 +221,7 @@ const careByIris: Project = {
   ),
   tags: ["Product Design", "App Design", "Onboarding"],
   heroImageKey: "IRIS_HERO",
+  accent: "#7a3fc4", // IRIS purple — 5.6:1
   tlDr: text(
     "Care by Iris är IRIS trygghetsklocka och dess anhörigapp, ett Vinnova-finansierat innovationsprojekt som Digalog och Digital Dimension Sverige AB drev tillsammans med Vingåkers kommun. Jag klev in strax efter att hårdvaran anlänt och tog under åtta veckor appdesignen från lo-fi-wireframes till en lanserad app i App Store och Google Play, byggde ett designsystem, omarbetade klockans gränssnitt från kinesiska till svenska, och tog fram onboardingflöden och fysiska manualer inför pilottester med seniorer i Vingåker.",
     "Care by Iris is the IRIS safety watch and its companion app, a Vinnova-funded innovation project run by Digalog and Digital Dimension Sverige AB together with Vingåkers kommun. I joined shortly after the hardware arrived and, over eight weeks, took the app design from lo-fi wireframes to a launched app in the App Store and Google Play, built a design system, reworked the watch's interface from Chinese to Swedish, and produced onboarding flows and physical manuals ahead of pilot tests with seniors in Vingåker."
@@ -373,6 +378,7 @@ const digitalCare: Project = {
   ),
   tags: ["UX Research", "Prototyping", "Usability Testing"],
   heroImageKey: "DC_HERO",
+  accent: "#1f5fbf", // Digital Care blue — 5.4:1
   tlDr: text(
     "Digital Care (DC) är Sensapps device management platform, där både egen personal och kommunal personal hanterar enheter, larm och support. Jag fick i uppdrag att förbättra DC visuellt och funktionsmässigt, med möjlighet att köra en fullständig Design Thinking-process. Fyra intervjuer med fem personer i tre kommuner pekade ut självservice som det starkaste återkommande behovet. Jag byggde en HTML-prototyp med hjälp av Claude, testade den med samma deltagare, och lämnade en kravspecifikation för teamet att bygga vidare på.",
     "Digital Care (DC) is Sensapp's device management platform, where both internal and municipal staff manage devices, alarms, and support. I was tasked with improving DC both visually and functionally, with the chance to run a full Design Thinking process. Four interviews with five people across three municipalities pointed to self-service as the strongest recurring need. I built an HTML prototype with the help of Claude, tested it with the same participants, and delivered a requirements specification for the team to build on."
@@ -535,31 +541,10 @@ export function getAdjacentProject(slug: string): Project {
 /* -------------------------------------------------------------------- */
 
 export const explorations: Exploration[] = [
-  {
-    slug: "voyant",
-    title: "Voyant",
-    descriptor: text(
-      "TODO: Lägg till en kort, verifierad beskrivning av Voyant.",
-      "TODO: Add a short, verified description of Voyant."
-    ),
-    imageKey: "VOYANT_PREVIEW",
-  },
-  {
-    slug: "alpha-leap",
-    title: "Alpha Leap",
-    descriptor: text(
-      "TODO: Lägg till en kort, verifierad beskrivning av Alpha Leap.",
-      "TODO: Add a short, verified description of Alpha Leap."
-    ),
-    imageKey: "ALPHA_LEAP_PREVIEW",
-  },
-  {
-    slug: "velox",
-    title: "Velox",
-    descriptor: text(
-      "TODO: Lägg till en kort, verifierad beskrivning av Velox.",
-      "TODO: Add a short, verified description of Velox."
-    ),
-    imageKey: "VELOX_PREVIEW",
-  },
+  // TryOn — also on John's Framer site.
+  { slug: "tryon", title: "TryOn", imageKey: "TRYON_PREVIEW" },
+  // Alpha Leap — school project: rebrand done for a real company.
+  { slug: "alpha-leap", title: "Alpha Leap", imageKey: "ALPHA_LEAP_PREVIEW" },
+  // Pitch Please — school project: website for a karaoke bar.
+  { slug: "pitch-please", title: "Pitch Please", imageKey: "PITCH_PLEASE_PREVIEW" },
 ];

@@ -1,20 +1,42 @@
 .card {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: var(--space-4);
+  cursor: pointer;
 }
 
-.imageLink {
-  display: block;
+/* Stretched link: the title link covers the whole card */
+.cardLink::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.cardLink:focus-visible {
+  outline: none;
+}
+
+.card:has(.cardLink:focus-visible) {
+  outline: 3px solid var(--card-accent, var(--color-accent));
+  outline-offset: 8px;
   border-radius: var(--radius-md);
 }
 
 .image {
-  transition: transform var(--duration-standard) var(--ease-standard);
+  transform-origin: center;
+  transition: transform 700ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
 }
 
-.card:hover .image {
-  transform: scale(1.015);
+/* Smooth zoom toward the visitor on desktop / pointer devices only.
+   No shadow or lift, so a white image still blends into the page.
+   5% growth = ~6px at the bottom edge, well inside the gap to the title. */
+@media (hover: hover) and (pointer: fine) {
+  .card:hover .image {
+    transform: scale(1.05);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -36,8 +58,20 @@
   letter-spacing: -0.005em;
 }
 
-.title a:hover {
-  color: var(--color-accent);
+.cardLink {
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  transition:
+    color var(--duration-fast) var(--ease-standard),
+    text-decoration-color var(--duration-fast) var(--ease-standard);
+}
+
+.card:hover .cardLink,
+.cardLink:focus-visible {
+  color: var(--card-accent, var(--color-accent));
+  text-decoration-color: currentColor;
 }
 
 .meta {
@@ -62,21 +96,30 @@
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
-  margin-block-start: var(--space-2);
+  min-height: 44px;
   font-size: 0.9375rem;
   font-weight: 500;
+  border-bottom: 1px solid transparent;
+  transition:
+    color var(--duration-fast) var(--ease-standard),
+    border-color var(--duration-fast) var(--ease-standard);
 }
 
-.viewCase span {
+.arrow {
+  display: inline-block;
   transition: transform var(--duration-fast) var(--ease-standard);
 }
 
-.viewCase:hover span {
-  transform: translateX(4px);
+.card:hover .viewCase {
+  color: var(--card-accent, var(--color-accent));
+}
+
+.card:hover .arrow {
+  transform: translateX(6px);
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .viewCase:hover span {
+  .card:hover .arrow {
     transform: none;
   }
 }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Container } from "@/components/ui/Container";
 import { ArrowLink } from "@/components/ui/ArrowLink";
+import { CopyEmailButton } from "@/components/ui/CopyEmailButton";
 import { locales, isLocale } from "@/lib/i18n";
 import { localePath } from "@/lib/paths";
 import { translations } from "@/content/translations";
@@ -56,6 +57,21 @@ export default async function CVPage({
         <a href={`mailto:${contact.email}`} className={styles.email}>
           {contact.email}
         </a>
+
+        <div className={styles.actions} data-no-print>
+          <a
+            href={`/cv/john-akerberg-cv-${lang}.pdf`}
+            download
+            className={styles.download}
+          >
+            <span aria-hidden="true">↓</span> {t.cvDownload}
+          </a>
+          <CopyEmailButton
+            email={contact.email}
+            label={t.contactCopyEmail}
+            copiedLabel={t.contactCopied}
+          />
+        </div>
 
         <p className={styles.summary}>{cvContent.summary[lang]}</p>
 
@@ -138,7 +154,7 @@ export default async function CVPage({
           </section>
         </div>
 
-        <div className={styles.contactLink}>
+        <div className={styles.contactLink} data-no-print>
           <ArrowLink href={`${localePath(lang, "/")}#contact`}>{t.cvContactLink}</ArrowLink>
         </div>
       </Container>

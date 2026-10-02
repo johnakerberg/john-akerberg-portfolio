@@ -28,7 +28,7 @@ export const translations = {
     heroHeading:
       "Jag designar produkter utifrån hur människor faktiskt tänker och beter sig.",
     heroBody:
-      "Jag heter John Åkerberg och är UX / Product Designer i Göteborg. Jag använder research, produktperspektiv och design för att göra komplexa upplevelser enklare att förstå.",
+      "Jag heter John Åkerberg och är UX / Product Designer från Göteborg. Jag använder research, produktperspektiv och design för att göra komplexa upplevelser enklare att förstå.",
     heroCta: "Se utvalda projekt",
 
     // Selected work
@@ -37,7 +37,7 @@ export const translations = {
 
     // Explorations
     explorationsHeading: "Utvalda utforskningar",
-    explorationsPreviewLabel: "Förhandsvisning",
+    explorationsComingSoon: "Kommer snart",
 
     // About preview (homepage)
     aboutPreviewHeading: "Designer av nyfikenhet. Researcher av instinkt.",
@@ -49,7 +49,11 @@ export const translations = {
     contactHeading1: "Har du något intressant i åtanke?",
     contactHeading2: "Låt oss prata.",
     contactCta: "Kontakta mig",
-    contactEmailLabel: "E-post",
+    contactPrompt: "Hör gärna av dig via e-post. Kopiera adressen eller öppna ditt e-postprogram.",
+    contactCopyEmail: "Kopiera e-post",
+    contactCopied: "Kopierad!",
+    contactOpenMail: "Öppna e-postprogram",
+    contactClose: "Stäng",
     contactLinkedInLabel: "LinkedIn",
     contactCVLabel: "CV",
 
@@ -68,6 +72,7 @@ export const translations = {
     cvSkillsHeading: "Kompetenser",
     cvLanguagesHeading: "Språk",
     cvContactLink: "Kontakta mig",
+    cvDownload: "Ladda ner CV (PDF)",
 
     // Case study
     caseTlDrLabel: "Sammanfattning",
@@ -86,7 +91,9 @@ export const translations = {
     // 404
     notFoundTitle: "404",
     notFoundBody: "Det verkar som att den här sidan har kommit bort.",
-    notFoundLink: "Tillbaka till projekten",
+    notFoundHelp: "Adressen kan vara felstavad, eller så har sidan flyttats.",
+    notFoundHome: "Till startsidan",
+    notFoundLink: "Se mina projekt",
   },
   en: {
     // Skip link / landmarks
@@ -123,7 +130,7 @@ export const translations = {
 
     // Explorations
     explorationsHeading: "Selected explorations",
-    explorationsPreviewLabel: "Preview",
+    explorationsComingSoon: "Coming soon",
 
     // About preview (homepage)
     aboutPreviewHeading: "Designer by curiosity. Researcher by instinct.",
@@ -135,7 +142,11 @@ export const translations = {
     contactHeading1: "Have something interesting in mind?",
     contactHeading2: "Let's talk.",
     contactCta: "Contact me",
-    contactEmailLabel: "Email",
+    contactPrompt: "Feel free to reach out by email. Copy the address or open your mail app.",
+    contactCopyEmail: "Copy email",
+    contactCopied: "Copied!",
+    contactOpenMail: "Open mail app",
+    contactClose: "Close",
     contactLinkedInLabel: "LinkedIn",
     contactCVLabel: "CV",
 
@@ -154,6 +165,7 @@ export const translations = {
     cvSkillsHeading: "Skills",
     cvLanguagesHeading: "Languages",
     cvContactLink: "Contact me",
+    cvDownload: "Download CV (PDF)",
 
     // Case study
     caseTlDrLabel: "Summary",
@@ -172,7 +184,9 @@ export const translations = {
     // 404
     notFoundTitle: "404",
     notFoundBody: "Looks like this page wandered off.",
-    notFoundLink: "Back to selected work",
+    notFoundHelp: "The address may be misspelled, or the page may have moved.",
+    notFoundHome: "Go to the homepage",
+    notFoundLink: "See my work",
   },
 } satisfies Record<Locale, Record<string, string>>;
 

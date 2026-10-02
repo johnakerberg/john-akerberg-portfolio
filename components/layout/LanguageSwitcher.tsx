@@ -11,33 +11,31 @@ export function LanguageSwitcher({ lang }: { lang: Locale }) {
   const pathname = usePathname() || `/${lang}`;
   const t = translations[lang];
 
-  const svHref = swapLocaleInPath(pathname, "sv");
-  const enHref = swapLocaleInPath(pathname, "en");
+  const options = [
+    { code: "sv" as const, short: "SV", label: t.langSwitchToSv },
+    { code: "en" as const, short: "EN", label: t.langSwitchToEn },
+  ];
 
   return (
     <div className={styles.switcher} role="group" aria-label={t.langGroupLabel}>
-      <Link
-        href={svHref}
-        hrefLang="sv"
-        lang="sv"
-        aria-label={t.langSwitchToSv}
-        aria-current={lang === "sv" ? "true" : undefined}
-        className={`${styles.flag} ${lang === "sv" ? styles.active : ""}`}
-      >
-        <span aria-hidden="true">🇸🇪</span>
-        <span className="sr-only">{t.langNameSv}</span>
-      </Link>
-      <Link
-        href={enHref}
-        hrefLang="en"
-        lang="en"
-        aria-label={t.langSwitchToEn}
-        aria-current={lang === "en" ? "true" : undefined}
-        className={`${styles.flag} ${lang === "en" ? styles.active : ""}`}
-      >
-        <span aria-hidden="true">🇬🇧</span>
-        <span className="sr-only">{t.langNameEn}</span>
-      </Link>
+      <span
+        aria-hidden="true"
+        className={styles.indicator}
+        style={{ transform: lang === "en" ? "translateX(100%)" : undefined }}
+      />
+      {options.map((option) => (
+        <Link
+          key={option.code}
+          href={swapLocaleInPath(pathname, option.code)}
+          hrefLang={option.code}
+          aria-current={lang === option.code ? "true" : undefined}
+          className={`${styles.option} ${lang === option.code ? styles.active : ""}`}
+        >
+          {option.short}
+          {/* Visible text first in the accessible name (WCAG 2.5.3) */}
+          <span className="sr-only">, {option.label}</span>
+        </Link>
+      ))}
     </div>
   );
 }

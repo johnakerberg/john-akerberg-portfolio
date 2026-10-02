@@ -4,15 +4,15 @@ import { useEffect, useId, useRef, useState } from "react";
 import Link from "next/link";
 import type { Locale } from "@/lib/i18n";
 import { translations } from "@/content/translations";
-import { localePath } from "@/lib/paths";
+import type { NavItem } from "./DesktopNav";
+import { useActiveNav } from "./useActiveNav";
 import styles from "./MobileNavigation.module.css";
-
-type NavItem = { href: string; label: string };
 
 export function MobileNavigation({ lang, navItems }: { lang: Locale; navItems: NavItem[] }) {
   const [open, setOpen] = useState(false);
   const menuId = useId();
   const triggerRef = useRef<HTMLButtonElement>(null);
+  const active = useActiveNav();
   const t = translations[lang];
 
   useEffect(() => {
@@ -46,17 +46,17 @@ export function MobileNavigation({ lang, navItems }: { lang: Locale; navItems: N
         <div id={menuId} className={styles.panel}>
           <ul className={styles.list}>
             {navItems.map((item) => (
-              <li key={item.href}>
-                <Link href={item.href} onClick={() => setOpen(false)}>
+              <li key={item.key}>
+                <Link
+                  href={item.href}
+                  aria-current={active === item.key ? "true" : undefined}
+                  className={`${styles.link} ${active === item.key ? styles.active : ""}`}
+                  onClick={() => setOpen(false)}
+                >
                   {item.label}
                 </Link>
               </li>
             ))}
-            <li>
-              <Link href={localePath(lang, "/cv")} onClick={() => setOpen(false)}>
-                {t.navCV}
-              </Link>
-            </li>
           </ul>
         </div>
       ) : null}

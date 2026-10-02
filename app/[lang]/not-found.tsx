@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { Container } from "@/components/ui/Container";
+import { ArrowLink } from "@/components/ui/ArrowLink";
 import { translations } from "@/content/translations";
 import { localePath } from "@/lib/paths";
 import { isLocale, defaultLocale, type Locale } from "@/lib/i18n";
@@ -13,14 +14,19 @@ export default function NotFound() {
   const rawLang = params?.lang;
   const lang: Locale = isLocale(rawLang) ? rawLang : defaultLocale;
   const t = translations[lang];
+  const home = localePath(lang, "/");
 
   return (
     <Container className={styles.wrap}>
       <p className={styles.code}>{t.notFoundTitle}</p>
-      <p className={styles.message}>{t.notFoundBody}</p>
-      <Link href={`${localePath(lang, "/")}#work`} className={styles.link}>
-        {t.notFoundLink} <span aria-hidden="true">→</span>
-      </Link>
+      <h1 className={styles.message}>{t.notFoundBody}</h1>
+      <p className={styles.help}>{t.notFoundHelp}</p>
+      <div className={styles.actions}>
+        <Link href={home} className={styles.primary}>
+          {t.notFoundHome}
+        </Link>
+        <ArrowLink href={`${home}#work`}>{t.notFoundLink}</ArrowLink>
+      </div>
     </Container>
   );
 }

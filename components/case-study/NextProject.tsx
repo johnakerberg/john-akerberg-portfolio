@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { CSSProperties } from "react";
 import { Container } from "@/components/ui/Container";
 import { ImageSlot } from "@/components/ui/ImageSlot";
 import { imageRegistry } from "@/content/image-registry";
@@ -16,7 +17,11 @@ export function NextProject({ project, lang }: { project: Project; lang: Locale 
   return (
     <section className={styles.section} aria-labelledby="next-project-heading">
       <Container>
-        <Link href={href} className={styles.link}>
+        <Link
+          href={href}
+          className={styles.link}
+          style={{ "--card-accent": project.accent } as CSSProperties}
+        >
           <p id="next-project-heading" className={styles.label}>
             {t.caseNextProject}
           </p>

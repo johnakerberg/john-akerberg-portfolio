@@ -25,7 +25,7 @@ export const siteConfig = {
     en: "John Åkerberg — UX / Product Designer",
   } satisfies Record<Locale, string>,
   description: {
-    sv: "John Åkerberg är UX / Product Designer i Göteborg. Portfolio med utvalda projekt inom research, produktdesign och digital välfärdsteknik.",
+    sv: "John Åkerberg är UX / Product Designer från Göteborg. Portfolio med utvalda projekt inom research, produktdesign och digital välfärdsteknik.",
     en: "John Åkerberg is a UX / Product Designer based in Gothenburg. Portfolio featuring selected work in research, product design and digital welfare technology.",
   } satisfies Record<Locale, string>,
 };

@@ -29,6 +29,14 @@
   font-weight: 600;
 }
 
+.title {
+  transition: color var(--duration-fast) var(--ease-standard);
+}
+
+.link:hover .title {
+  color: var(--card-accent, var(--color-accent));
+}
+
 .link:hover .title span {
   display: inline-block;
   transform: translateX(4px);

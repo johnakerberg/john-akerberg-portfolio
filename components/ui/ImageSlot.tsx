@@ -12,6 +12,8 @@ export type ImageSlotProps = {
   priority?: boolean;
   sizes?: string;
   className?: string;
+  /** Show the slot key and ratio inside the placeholder (useful while building). */
+  placeholderMeta?: boolean;
 };
 
 /**
@@ -29,6 +31,7 @@ export function ImageSlot({
   priority = false,
   sizes = "(min-width: 1024px) 50vw, 100vw",
   className,
+  placeholderMeta = true,
 }: ImageSlotProps) {
   const frameStyle = { aspectRatio: aspectRatio.replace("/", " / ") } as CSSProperties;
   const figureClasses = [styles.figure, className].filter(Boolean).join(" ");
@@ -47,8 +50,12 @@ export function ImageSlot({
           />
         ) : (
           <div className={styles.placeholder} role="img" aria-label={alt}>
-            <span className={styles.placeholderLabel}>{label}</span>
-            <span className={styles.placeholderRatio}>{aspectRatio.replace("/", ":")}</span>
+            {placeholderMeta ? (
+              <>
+                <span className={styles.placeholderLabel}>{label}</span>
+                <span className={styles.placeholderRatio}>{aspectRatio.replace("/", ":")}</span>
+              </>
+            ) : null}
           </div>
         )}
       </div>

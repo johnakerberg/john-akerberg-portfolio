@@ -1,4 +1,5 @@
 import { Container } from "@/components/ui/Container";
+import { ContactEmail } from "./ContactEmail";
 import { translations } from "@/content/translations";
 import { contact } from "@/content/site";
 import { localePath } from "@/lib/paths";
@@ -17,17 +18,20 @@ export function ContactCTA({ lang }: { lang: Locale }) {
           {t.contactHeading2}
         </h2>
 
-        <a href={`mailto:${contact.email}`} className={styles.cta}>
-          {t.contactCta} <span aria-hidden="true">→</span>
-        </a>
+        <ContactEmail
+          email={contact.email}
+          ctaLabel={t.contactCta}
+          promptText={t.contactPrompt}
+          openMailLabel={t.contactOpenMail}
+          copyLabel={t.contactCopyEmail}
+          copiedLabel={t.contactCopied}
+          closeLabel={t.contactClose}
+        />
 
         <ul className={styles.links}>
           <li>
-            <a href={`mailto:${contact.email}`}>{t.contactEmailLabel}</a>
-          </li>
-          <li>
             <a href={contact.linkedin} target="_blank" rel="noreferrer">
-              {t.contactLinkedInLabel}
+              {t.contactLinkedInLabel} <span aria-hidden="true">↗</span>
             </a>
           </li>
           <li>

@@ -48,6 +48,11 @@ brief's rules below should generally be followed rather than reinvented.
 - Explicitly **not allowed**: gradients, glassmorphism, glow effects,
   carousels, image lightbox, fake testimonials/client logos/metrics,
   skill percentage bars, large SaaS-style shadows
+- **Exception (John, 2026-10):** "liquid glass" is allowed for the
+  "where am I" markers only: nav pill, SV/EN switcher, mobile menu
+  (tokens `--glass-*` in globals.css). Don't spread it elsewhere.
+- CV PDFs in `public/cv/` are generated with `npm run cv:pdf` (dev
+  server running) — re-run after editing `content/cv.ts`.
 - Prefer borders over shadows; radius 6–14px
 - WCAG 2.2 AA throughout: skip link, visible `:focus-visible`,
   keyboard nav, `prefers-reduced-motion` support, semantic landmarks

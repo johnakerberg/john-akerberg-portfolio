@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
+import { DesktopNav, type NavItem } from "./DesktopNav";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { MobileNavigation } from "./MobileNavigation";
 import { localePath } from "@/lib/paths";
@@ -11,10 +12,11 @@ export function Header({ lang }: { lang: Locale }) {
   const t = translations[lang];
   const home = localePath(lang, "/");
 
-  const navItems = [
-    { href: `${home}#work`, label: t.navWork },
-    { href: localePath(lang, "/about"), label: t.navAbout },
-    { href: `${home}#contact`, label: t.navContact },
+  const navItems: NavItem[] = [
+    { key: "work", href: `${home}#work`, label: t.navWork },
+    { key: "about", href: localePath(lang, "/about"), label: t.navAbout },
+    { key: "contact", href: `${home}#contact`, label: t.navContact },
+    { key: "cv", href: localePath(lang, "/cv"), label: t.navCV },
   ];
 
   return (
@@ -24,20 +26,7 @@ export function Header({ lang }: { lang: Locale }) {
           JOHN ÅKERBERG
         </Link>
 
-        <nav aria-label={t.mainNavLabel} className={styles.desktopNav}>
-          <ul className={styles.navList}>
-            {navItems.map((item) => (
-              <li key={item.href}>
-                <Link href={item.href}>{item.label}</Link>
-              </li>
-            ))}
-            <li>
-              <Link href={localePath(lang, "/cv")} className={styles.cvLink}>
-                {t.navCV}
-              </Link>
-            </li>
-          </ul>
-        </nav>
+        <DesktopNav items={navItems} label={t.mainNavLabel} />
 
         <div className={styles.controls}>
           <LanguageSwitcher lang={lang} />

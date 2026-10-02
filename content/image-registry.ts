@@ -203,28 +203,29 @@ export const imageRegistry = {
     ratio: "1337/2146",
   },
 
-  // Explorations
-  VOYANT_PREVIEW: {
+  // Explorations — shown as "coming soon" until real images exist.
+  // TODO: replace alt text with a real description when src is set.
+  TRYON_PREVIEW: {
     src: null,
     alt: {
-      sv: "TODO: Lägg till beskrivande alt-text för Voyant",
-      en: "TODO: Add descriptive alt text for Voyant",
+      sv: "Förhandsbild av TryOn",
+      en: "Preview image of TryOn",
     },
     ratio: "4/3",
   },
   ALPHA_LEAP_PREVIEW: {
     src: null,
     alt: {
-      sv: "TODO: Lägg till beskrivande alt-text för Alpha Leap",
-      en: "TODO: Add descriptive alt text for Alpha Leap",
+      sv: "Förhandsbild av rebrandingen av Alpha Leap",
+      en: "Preview image of the Alpha Leap rebrand",
     },
     ratio: "4/3",
   },
-  VELOX_PREVIEW: {
+  PITCH_PLEASE_PREVIEW: {
     src: null,
     alt: {
-      sv: "TODO: Lägg till beskrivande alt-text för Velox",
-      en: "TODO: Add descriptive alt text for Velox",
+      sv: "Förhandsbild av Pitch Please",
+      en: "Preview image of Pitch Please",
     },
     ratio: "4/3",
   },

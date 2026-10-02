@@ -1,0 +1,24 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 44px;
+  padding-inline: var(--space-4);
+  border-radius: var(--radius-md);
+  border: 1px solid currentColor;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  transition:
+    background-color var(--duration-fast) var(--ease-standard),
+    color var(--duration-fast) var(--ease-standard);
+}
+
+.button:hover {
+  background-color: rgba(127, 127, 127, 0.14);
+}
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  text-align: center;
+}

@@ -23,12 +23,14 @@ export function Explorations({ lang }: { lang: Locale }) {
                 <ImageSlot
                   src={image.src}
                   alt={image.alt[lang]}
-                  label={item.imageKey}
                   aspectRatio={image.ratio}
+                  placeholderMeta={false}
                 />
-                <p className={styles.previewLabel}>{t.explorationsPreviewLabel}</p>
+                <p className={styles.previewLabel}>{t.explorationsComingSoon}</p>
                 <h3 className={styles.itemTitle}>{item.title}</h3>
-                <p className={styles.itemDescriptor}>{item.descriptor[lang]}</p>
+                {item.descriptor ? (
+                  <p className={styles.itemDescriptor}>{item.descriptor[lang]}</p>
+                ) : null}
               </li>
             );
           })}

@@ -1,0 +1,66 @@
+.nav {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .nav {
+    display: block;
+  }
+}
+
+/* The track the glass pill moves along */
+.list {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: 4px;
+  border-radius: 999px;
+  background: var(--glass-track);
+  border: 1px solid var(--glass-track-border);
+}
+
+.link {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding-inline: var(--space-4);
+  border-radius: 999px;
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+  transition: color var(--duration-fast) var(--ease-standard);
+}
+
+.link:hover,
+.active {
+  color: var(--color-text);
+}
+
+.active {
+  font-weight: 500;
+}
+
+/* Liquid glass pill */
+.indicator {
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  left: 0;
+  border-radius: 999px;
+  background: var(--glass-fill);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  backdrop-filter: blur(12px) saturate(180%);
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    transform 420ms var(--ease-liquid),
+    width 420ms var(--ease-liquid),
+    opacity var(--duration-standard) var(--ease-standard);
+}
+
+.indicatorVisible {
+  opacity: 1;
+}
