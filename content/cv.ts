@@ -77,7 +77,7 @@ export const cvContent = {
     {
       role: text("Padelcoach", "Padel Coach"),
       org: "Padelson Academy",
-      timeline: text("2021–2022", "2021–2022"),
+      timeline: text("Hösten 2022–sommaren 2023", "Autumn 2022–summer 2023"),
       bullets: [
         text(
           "Höll i grupp- och privatlektioner för nybörjare och medelgoda spelare, med fokus på teknik, strategi och spelglädje.",
@@ -88,7 +88,7 @@ export const cvContent = {
     {
       role: text("Lagerarbetare / Truckförare", "Warehouse Worker / Forklift Driver"),
       org: "Baby World, Uppsala",
-      timeline: text("2021–2022", "2021–2022"),
+      timeline: text("Hösten 2022–sommaren 2023", "Autumn 2022–summer 2023"),
       bullets: [
         text(
           "Orderplockning, lastning/lossning och intern logistik. Körde truck (kategori A).",

@@ -9,13 +9,9 @@ export const person = {
   } satisfies Record<Locale, string>,
 };
 
-/**
- * LinkedIn URL is still a placeholder — confirm the real one with John
- * before treating it as verified.
- */
 export const contact = {
   email: "john94akerberg@gmail.com",
-  linkedin: "https://www.linkedin.com/in/johnakerberg", // TODO: confirm real LinkedIn URL
+  linkedin: "https://www.linkedin.com/in/john-%C3%A5kerberg-63732032a",
 };
 
 export const siteConfig = {
