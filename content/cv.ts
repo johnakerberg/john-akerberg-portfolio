@@ -139,8 +139,8 @@ export const cvContent = {
   ] satisfies CVEntry[],
   skills: [
     text("UX/UI-design (Figma, FigJam, Framer)", "UX/UI design (Figma, FigJam, Framer)"),
-    text("Prototyping (HTML, CSS, JavaScript, TypeScript)", "Prototyping (HTML, CSS, JavaScript, TypeScript)"),
-    text("AI-assisterad prototyping (Claude)", "AI-assisted prototyping (Claude)"),
+    text("Prototyping (HTML, CSS)", "Prototyping (HTML, CSS)"),
+    text("AI-assisterad prototyping med JavaScript och TypeScript (Claude)", "AI-assisted prototyping with JavaScript and TypeScript (Claude)"),
     text("Användarresearch & användartester", "User research & usability testing"),
     text("Problemlösning", "Problem solving"),
     text("Samarbete i team", "Team collaboration"),
