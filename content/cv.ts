@@ -77,11 +77,11 @@ export const cvContent = {
     {
       role: text("Padelcoach", "Padel Coach"),
       org: "Padelson Academy",
-      timeline: text("Hösten 2022–sommaren 2023", "Autumn 2022–summer 2023"),
+      timeline: text("Hösten 2022–våren 2023", "Autumn 2022–spring 2023"),
       bullets: [
         text(
-          "Höll i grupp- och privatlektioner för nybörjare och medelgoda spelare, med fokus på teknik, strategi och spelglädje.",
-          "Ran group and private lessons for beginner and intermediate players, focused on technique, strategy, and enjoyment of the game."
+          "Höll i grupp- och privatträning för barn i åldrarna 6–13.",
+          "Ran group and private training for children aged 6–13."
         ),
       ],
     },
