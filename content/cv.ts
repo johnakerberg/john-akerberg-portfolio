@@ -20,8 +20,8 @@ export type CVLanguage = {
 
 export const cvContent = {
   summary: text(
-    "UX / Produktdesigner med en bred bakgrund inom djuromsorg, handel och logistik. Jag har erfarenhet av att driva UX-arbete från research till lanserad produkt, både i projekt med direkt användarkontakt och i projekt där jag behövt förankra designval på andra sätt. Jag trivs bäst när jag får kombinera problemlösning med kreativitet.",
-    "UX / Product Designer with a diverse background in animal care, retail and logistics. I have experience driving UX work from research to launched product, both in projects with direct user access and in projects where I've had to ground design decisions in other ways. I do my best work combining problem-solving with creativity."
+    "UX/Produktdesigner med fokus på välfärdsteknik och tillgänglighet. Under två LIA-perioder har jag designat för äldre användare och deras anhöriga, från en trygghetsapp som lanserades i App Store och Google Play till en plattform för kommunernas hemtjänst. Jag förankrar designval i research. När användarna är svåra att nå använder jag etablerade riktlinjer som WCAG och återkoppling via andra vägar. Med en bakgrund inom djuromsorg, handel och logistik är jag van att jobba nära människor och i verksamheter där saker måste fungera i praktiken.",
+    "UX/Product Designer focused on welfare technology and accessibility. Across two internships I've designed for older users and their families, from a safety app launched on the App Store and Google Play to a platform for municipal home care. I ground design decisions in research. When users are hard to reach, I rely on established guidelines like WCAG and indirect feedback. With a background in animal care, retail, and logistics, I'm used to working close to people in settings where things have to work in practice."
   ),
   experience: [
     {
