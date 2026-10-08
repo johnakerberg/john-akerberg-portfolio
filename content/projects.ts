@@ -385,8 +385,8 @@ const digitalCare: Project = {
   heroImageKey: "DC_HERO",
   accent: "#1f5fbf", // Digital Care blue — 5.4:1
   tlDr: text(
-    "Digital Care (DC) är Sensapps device management platform, där både egen personal och kommunal personal hanterar enheter, larm och support. Jag fick i uppdrag att förbättra DC visuellt och funktionsmässigt, med möjlighet att köra en fullständig Design Thinking-process. Fyra intervjuer med fem personer i tre kommuner pekade ut självservice som det starkaste återkommande behovet. Jag byggde en HTML-prototyp med hjälp av Claude, testade den med samma deltagare, och lämnade en kravspecifikation för teamet att bygga vidare på.",
-    "Digital Care (DC) is Sensapp's device management platform, where both internal and municipal staff manage devices, alarms, and support. I was tasked with improving DC both visually and functionally, with the chance to run a full Design Thinking process. Four interviews with five people across three municipalities pointed to self-service as the strongest recurring need. I built an HTML prototype with the help of Claude, tested it with the same participants, and delivered a requirements specification for the team to build on."
+    "Digital Care (DC) är Sensapps device management platform, där både egen personal och kommunal personal hanterar enheter, larm och support. Jag fick i uppdrag att förbättra DC visuellt och funktionsmässigt, med möjlighet att köra en fullständig Design Thinking-process. Intervjuer med flera anställda i tre kommuner pekade ut självservice som det starkaste återkommande behovet. Jag byggde en HTML-prototyp med hjälp av Claude, testade den med samma deltagare, och lämnade en kravspecifikation för teamet att bygga vidare på.",
+    "Digital Care (DC) is Sensapp's device management platform, where both internal and municipal staff manage devices, alarms, and support. I was tasked with improving DC both visually and functionally, with the chance to run a full Design Thinking process. Interviews with several staff members across three municipalities pointed to self-service as the strongest recurring need. I built an HTML prototype with the help of Claude, tested it with the same participants, and delivered a requirements specification for the team to build on."
   ),
   meta: {
     role: text("UX Researcher / Product Designer", "UX Researcher / Product Designer"),
@@ -421,8 +421,8 @@ const digitalCare: Project = {
       heading: text("Intervjuer och insikter", "Interviews and insights"),
       body: [
         text(
-          "Min chef gav mig kontaktuppgifter till relevanta personer i tre kommuner som redan var kunder. Det blev fyra intervjuer med fem personer mellan den 1 och 15 april, genomförda via Teams utifrån en intervjuguide som godkänts av ledningen, och hållna öppna nog för att fånga både konkreta pain points och nya önskemål.",
-          "My manager gave me contact details for relevant people in three municipalities that were already customers. This became four interviews with five people between April 1 and 15, conducted over Teams from an interview guide approved by leadership, kept open enough to surface both concrete pain points and new requests."
+          "Min chef gav mig kontaktuppgifter till relevanta personer i tre kommuner som redan var kunder. Intervjuerna med flera anställda hölls via Teams mellan den 1 och 15 april, utifrån en intervjuguide som godkänts av ledningen, och var öppna nog för att fånga både konkreta pain points och nya önskemål.",
+          "My manager gave me contact details for relevant people in three municipalities that were already customers. The interviews with several staff members took place over Teams between April 1 and 15, using an interview guide approved by leadership, and were kept open enough to surface both concrete pain points and new requests."
         ),
         text(
           "Det tydligaste och mest återkommande temat var självservice: möjligheten att själv byta operatör vid täckningsproblem, koppla på och av larmklockor, rensa gamla enheter, och justera tider för dörrlarm och kameror ute på plats hos en brukare. Andra teman var att startsidan visade att något var fel men inte vad eller hur man skulle gå vidare, och att enheter listades med serienummer istället för brukarens namn, vilket gjorde dem svåra att hitta i långa listor.",
@@ -443,8 +443,8 @@ const digitalCare: Project = {
       ],
       insight: {
         observation: text(
-          "Samtliga fyra intervjuer, oavsett kommun eller roll, efterfrågade samma typ av självservice-funktioner kopplade till specifika fältsituationer, inte generell kontroll över systemet.",
-          "All four interviews, regardless of municipality or role, asked for the same kind of self-service features tied to specific field situations, not general control over the system."
+          "Samtliga intervjuer, oavsett kommun eller roll, efterfrågade samma typ av självservice-funktioner kopplade till specifika fältsituationer, inte generell kontroll över systemet.",
+          "All of the interviews, regardless of municipality or role, asked for the same kind of self-service features tied to specific field situations, not general control over the system."
         ),
         why: text(
           "Självservice visade sig vara en win-win: kommunen blir snabbare i fält samtidigt som Sensapps support frigörs till mer kvalificerade ärenden.",
