@@ -12,6 +12,9 @@ type ContactEmailProps = {
   copyLabel: string;
   copiedLabel: string;
   closeLabel: string;
+  phoneLabel: string;
+  phoneDisplay: string;
+  phoneHref: string;
 };
 
 /**
@@ -27,6 +30,9 @@ export function ContactEmail({
   copyLabel,
   copiedLabel,
   closeLabel,
+  phoneLabel,
+  phoneDisplay,
+  phoneHref,
 }: ContactEmailProps) {
   const [open, setOpen] = useState(false);
   const panelId = useId();
@@ -76,6 +82,12 @@ export function ContactEmail({
             {openMailLabel} <span aria-hidden="true">↗</span>
           </a>
         </div>
+        <p className={styles.phone}>
+          {phoneLabel}:{" "}
+          <a href={phoneHref} className={styles.phoneLink}>
+            {phoneDisplay}
+          </a>
+        </p>
       </div>
     </div>
   );

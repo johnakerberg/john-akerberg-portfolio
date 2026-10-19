@@ -26,6 +26,9 @@ export function ContactCTA({ lang }: { lang: Locale }) {
           copyLabel={t.contactCopyEmail}
           copiedLabel={t.contactCopied}
           closeLabel={t.contactClose}
+          phoneLabel={t.contactPhoneLabel}
+          phoneDisplay={contact.phone.display[lang]}
+          phoneHref={contact.phone.href}
         />
 
         <ul className={styles.links}>

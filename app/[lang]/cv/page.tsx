@@ -54,9 +54,14 @@ export default async function CVPage({
         <p className={styles.subheading}>
           {person.role} · {person.location[lang]}
         </p>
-        <a href={`mailto:${contact.email}`} className={styles.email}>
-          {contact.email}
-        </a>
+        <div className={styles.contactLines}>
+          <a href={`mailto:${contact.email}`} className={styles.email}>
+            {contact.email}
+          </a>
+          <a href={contact.phone.href} className={styles.email}>
+            {contact.phone.display[lang]}
+          </a>
+        </div>
 
         <div className={styles.actions} data-no-print>
           <a

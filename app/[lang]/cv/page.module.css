@@ -24,6 +24,17 @@
   margin-block-start: var(--space-3);
 }
 
+.contactLines {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-block-start: var(--space-2);
+}
+
+.contactLines .email {
+  min-height: 32px;
+}
+
 .email {
   display: inline-flex;
   align-items: center;

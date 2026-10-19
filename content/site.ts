@@ -11,6 +11,13 @@ export const person = {
 
 export const contact = {
   email: "john94akerberg@gmail.com",
+  phone: {
+    href: "tel:+46707144548",
+    display: {
+      sv: "070-714 45 48",
+      en: "+46 70 714 45 48",
+    } satisfies Record<Locale, string>,
+  },
   linkedin: "https://www.linkedin.com/in/john-%C3%A5kerberg-63732032a",
 };
 

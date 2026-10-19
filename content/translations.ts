@@ -54,6 +54,7 @@ export const translations = {
     contactCopied: "Kopierad!",
     contactOpenMail: "Öppna e-postprogram",
     contactClose: "Stäng",
+    contactPhoneLabel: "Eller ring mig",
     contactLinkedInLabel: "LinkedIn",
     contactCVLabel: "CV",
 
@@ -147,6 +148,7 @@ export const translations = {
     contactCopied: "Copied!",
     contactOpenMail: "Open mail app",
     contactClose: "Close",
+    contactPhoneLabel: "Or give me a call",
     contactLinkedInLabel: "LinkedIn",
     contactCVLabel: "CV",
 
